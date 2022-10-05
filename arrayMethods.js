@@ -132,10 +132,10 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 
 const bobsPurchase = purchases.filter(function(element) {
       return element.owner === "bob" })
-        .map(num) => {
+        .map(num => {
          return num.price
-        .reduce((runningTotal, index) => {
+    }) .reduce((runningTotal, index) => {
          return runningTotal + index
-      })
-
+    })
+ 
 console.log(bobsPurchase)
