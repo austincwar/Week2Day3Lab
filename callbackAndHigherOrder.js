@@ -234,6 +234,10 @@ getUserById(users, '16t', user => {
 
 // CODE HERE
 
+const addingFactory = (num1) => {
+  
+}
+
 /*
   Now that you have addingFactory, you can create other
   functions from it. 
