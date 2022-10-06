@@ -148,6 +148,7 @@ uniq(names, (uniqArr) => {
 
 // CODE HERE 
 
+names.forEach((elem, i) => console.log(`${elem} is at index ${i}`))
 
 
 /*
@@ -168,38 +169,52 @@ uniq(names, (uniqArr) => {
 */
 
 // Do not edit the code below.
-// var users = [
-//   {
-//     id: '12d',
-//     email: 'tyler@gmail.com',
-//     name: 'Tyler',
-//     address: '167 East 500 North'
-//   },
-//   {
-//     id: '15a',
-//     email: 'cahlan@gmail.com',
-//     name: 'Cahlan',
-//     address: '135 East 320 North'
-//   },
-//   {
-//     id: '16t',
-//     email: 'ryan@gmail.com',
-//     name: 'Ryan',
-//     address: '192 East 32 North'
-//   },
-// ]
+var users = [
+  {
+    id: '12d',
+    email: 'tyler@gmail.com',
+    name: 'Tyler',
+    address: '167 East 500 North'
+  },
+  {
+    id: '15a',
+    email: 'cahlan@gmail.com',
+    name: 'Cahlan',
+    address: '135 East 320 North'
+  },
+  {
+    id: '16t',
+    email: 'ryan@gmail.com',
+    name: 'Ryan',
+    address: '192 East 32 North'
+  },
+]
 // Do not edit the code above.
 
 // CODE HERE 
+
+function getUserById(arrOfObjs, id, callback) {
+  let matchingUSer = null
+  for (let i=0; i< arrOfObjs.length; i++) {
+    if (arrOfObjs[i].id === id) {
+      matchingUSer = arrOfObjs[i]
+    }
+  }
+
+callback(matchingUSer)
+}
 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// getUserById(users, '16t', user => {
-//   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
-// })
+getUserById(users, '16t', user => {
+   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
+})
+
+
+
 
 ////////// CHALLENGE //////////
 
